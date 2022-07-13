@@ -106,7 +106,6 @@ const getBrowser = () => {
         isSamsung: false,
         isOthers: false,
         isInApp: false,
-        isMirinae: false,
         name: '',
         majorVersion: 0,
     };
@@ -126,9 +125,6 @@ const getBrowser = () => {
 
     if (inAppBrowsers.test(userAgent)) {
         result.isInApp = true;
-    }
-    if (/MirinaeInApp/i.test(userAgent)) {
-        result.isMirinae = true;
     }
 
     result.name = getNameVer().name;
